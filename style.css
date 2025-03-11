@@ -1,0 +1,158 @@
+/* style.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif; /* Choose a suitable font */
+}
+
+body {
+    line-height: 1.6;
+    color: #333; /* Dark gray text */
+}
+
+/* Header and Navigation */
+header {
+
+    background-color: #f0f0f0; /* Light gray header */
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: sticky; /* Add this to make the header sticky */
+    top: 0; /* Stick the header to the top of the viewport */
+    z-index: 100; /* Ensure the header stays on top of other elements */
+    width: 100%; /* Optional: Make the header span the full width */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Limit the width of the content */
+    margin: 0 auto; /* Center the content */
+    padding: 0 1rem; /* Add some padding on the sides */
+}
+.profile-picture {
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Maintain aspect ratio if desired */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure the image covers the area */
+    display: block; /* Prevents spacing issues */
+    margin: 50px auto; /* Center the image */
+    margin-bottom: 15px !important;
+    margin-top: 25px !important;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+nav a:hover {
+    color: #007bff; /* Blue color on hover */
+}
+
+/* Sections */
+section {
+    padding: 3rem 1rem; /* Add padding to all sections */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-section {
+    text-align: center; /* Center the about content */
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.about-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.about-text {
+    margin-top: 5px;
+}
+.shops-section h2,
+.contact-section h2 {
+    text-align: center;
+    /* margin-bottom: 1rem; */
+}
+
+/* Shops Grid */
+.shops-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+}
+
+.shop {
+    border: 1px solid #ddd; /* Light border */
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s ease;
+}
+
+.shop:hover{
+    transform: translateY(-5px);
+}
+
+.shop-image {
+    width: 100%; /* Make images fill the container */
+    max-height: 200px; /* Limit image height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding-top: 1rem !important;
+}
+
+.my-shops{
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Responsive adjustments (optional, but recommended) */
+@media (max-width: 768px) {
+    
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0.5rem; /* Adjust spacing for smaller screens */
+    }
+}
